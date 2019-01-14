@@ -1,39 +1,23 @@
 import React from "react";
 import ReactDOM from "react-dom"
+import Main from "./components/SeasonContainer";
 
 
 class App extends React.Component {
-    constructor(props) {
-        super(props)
-        
-        //this is the only time we do the direct assignment
-        this.state = { lat: null, errorMsg: '' }
+  constructor(props) {
+    super(props)
+  
+    this.state = {}
+  }
 
-        window.navigator.geolocation.getCurrentPosition(
-            position => {
-                // only use setState to update state !!!
-                this.setState({
-                  lat: position.coords.latitude
-                })
-            },
-            err => {
-                this.setState({
-                  errorMsg: err.message
-                })
-            }
-        );
-    }
-    
-    //React says we have to define render!!
-    render () {        
-        return (
-            <div>
-                Latitude: {this.state.lat}
-                <br />
-                Error: {this.state.errorMsg}
-            </div>
-        )
-    }    
+  render(){
+      return (
+          <div>
+              <Main />
+          </div>
+      )
+  }
+  
 }
 
 ReactDOM.render(
