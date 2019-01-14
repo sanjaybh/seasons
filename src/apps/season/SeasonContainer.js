@@ -4,18 +4,21 @@ import Spinner from "./Spinner";
 
 class SeasonContainer extends React.Component {
     /*constructor(props) {
-    super(props);
+        super(props);
 
-    //this is the only time we do the direct assignment
-    this.state = { lat: null, errorMsg: "" };
-  }*/
+        //this is the only time we do the direct assignment
+        //this.state = { lat: null, errorMsg: "" };
+    }*/
 
-    state = { lat: null, errorMsg: '' }
+    state = { time: new Date().toLocaleTimeString(), lat: null, errorMsg: '', spinnerMsg:"Please accept location request" }
 
     //Lifecycle method
     componentDidMount() {
         console.log("component Did Mount");
 
+        setInterval(() => {
+            this.setState({ time: new Date().toLocaleTimeString()})
+        }, 1000);
         //this will be called ONE time
         window.navigator.geolocation.getCurrentPosition(
             position => {
@@ -67,10 +70,10 @@ class SeasonContainer extends React.Component {
         }
 
         if (!this.state.errorMessage && this.state.lat) {
-            return <SeasonDisplay lat={this.state.lat} />;
+            return <SeasonDisplay time={this.state.time} lat={this.state.lat} />;
         }
 
-        return <Spinner message="Please accept location request" />;
+        return <Spinner message={this.spinnerMsg} />;
     }
 
     render() {
