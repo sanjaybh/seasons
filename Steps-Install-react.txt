@@ -1,0 +1,55 @@
+Steps to install React
+
+Step 1:-
+Install node
+
+Step 2:-
+npm install -g create-react-app
+{
+	npm - runs
+	install - we want to install a package onto our computer
+	-g -> installs this package globally so we can run it from the terminal
+	create-react-app -> name of the package we want to install
+}
+
+OR
+
+npx create-react-app seasons
+{
+	npx	 - with version of npm from versions of 5.2 & higher
+}
+
+Step 3:-
+go to the directory created
+c:> cd seasons
+
+Step 4:-
+npm start 
+{
+this command will be run in the project directory only
+}
+
+Step 5:-
+App will be started on below ports
+
+ Local:            http://localhost:3000/
+  On Your Network:  http://192.168.1.6:3000/
+  
+  
+  
+Step 6:-
+
+…or create a new repository on the command line
+
+echo "# seasons" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/sanjaybh/seasons.git
+git push -u origin master
+
+
+…or push an existing repository from the command line
+
+git remote add origin https://github.com/sanjaybh/seasons.git
+git push -u origin master
