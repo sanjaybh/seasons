@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@extjs/reactor": "^1.1.2",
     "axios": "^0.18.0",
     "npm": "^6.5.0",
     "react": "^16.7.0",
