@@ -2,7 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom"
 
 //import SeasonContainer from "./apps/season/SeasonContainer";
-import SearchContainer from "./apps/pics/SearchContainer";
+//import SearchContainer from "./apps/pics/SearchContainer";
+import VideoContainer from "./apps/youtube/components/VideoContainer"
 
 class App extends React.Component {
   constructor(props) {
@@ -12,9 +13,11 @@ class App extends React.Component {
   }
 
   render() {
-    return <div> 
-        <SearchContainer />
-      </div>;
+    return (
+      <div>
+        <VideoContainer />
+      </div>
+    );
   }
   /*
   render() {
@@ -22,8 +25,9 @@ class App extends React.Component {
       <div>
           <header><h1>Header Tabs</h1></header>
             <section>
-            <SeasonContainer />
+              <SeasonContainer />
               <SearchContainer />
+              <VideoContainer />
             </section>
 
           <footer><i>Footer</i></footer>
