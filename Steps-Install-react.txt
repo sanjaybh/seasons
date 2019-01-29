@@ -1,9 +1,9 @@
-Best tutorial for ES6
+﻿Best tutorial for ES6
 ----------------------
 https://scrimba.com/g/gintrotoes6
 
 
-
+===============[Installing Steps]================
 
 Steps to install React
 
@@ -21,19 +21,19 @@ npm install -g create-react-app
 
 OR
 
-npx create-react-app seasons
+npx create-react-app <project name>
 {
 	npx	 - with version of npm from versions of 5.2 & higher
 }
 
 Step 3:-
 go to the directory created
-c:> cd seasons
+c:> cd <project name>
 
 Step 4:-
 npm start 
 {
-this command will be run in the project directory only
+	this command will be run in the project directory only
 }
 
 Step 5:-
@@ -48,7 +48,7 @@ Step 6:-
 
 …or create a new repository on the command line
 
-echo "# seasons" >> README.md
+echo "# <project name>" >> README.md
 git init
 git add README.md
 git commit -m "first commit"
@@ -60,3 +60,29 @@ git push -u origin master
 
 git remote add origin https://github.com/sanjaybh/seasons.git
 git push -u origin master
+
+
+=============[Uninstall create-react-app]==========
+
+I solved the problem by uninstalling create-react-app:
+npm uninstall create-react-app
+
+then install with the following command:
+npm install -g create-react-app
+==================================
+
+Fake Data API
+-----------------
+jsonPlaceholder API -> 
+https://jsonplaceholder.typicode.com
+
+/posts 		100 posts (*)
+/comments 	500 comments
+/albums 	100 albums
+/photos 	5000 photos
+/todos 		200 todos
+/users 		10 users (*)
+
+
+new project - Blog
+npm install --save redux react-redux axios redux-thunk

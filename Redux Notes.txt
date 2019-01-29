@@ -20,3 +20,13 @@ The only way to change the state is to emit an action, an object describing what
 #3. To specify how the state tree is transformed by actions, you write pure reducers
 
 
+
+
+
+Redux Thunk
+-----------
+Middleware to help us make requests in a redux application
+
+Middleware applies to Redux library, these are basically functions that is going to change the behaviour of the our redux store, so they will add in new cabililites or new features to the redux side of your application.
+
+This will help us make the network requests from the redux side of our app, this is mostly used in vast applications, redux thunk is extremely popular and there is only handfull of other alternatives that make is easy for you to do network requests from the redux side of the application.
